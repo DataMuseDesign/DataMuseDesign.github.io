@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CS171 - Final Project</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/stickPersonVisStyle.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="parallax">
+		<div class="text-box">
+			<h1 align="center" style="color:white;">Understanding Academic Success Across the Boston Area</h1>
+		</div>
+	</div>
+
+	<div align="center" style="padding-top:30px">
+		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/n2JbW19cSd8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+
+	<div class="text">
+		<p class="paragraphs">The American public school system has been increasingly focused on attempting to
+			encourage all students to succeed academically. This goal is demonstrated by famous policies like
+			"No Child Left Behind", the proliferation of charter schools, and the amount of energy dedicated to
+			standardized testing. But have these attempts to level the playing field really worked to lift all
+			students and school districts to a satisfactory level of performance?<br><br>
+		We looked at data from the <a href="http://profiles.doe.mass.edu/state_report">MA
+			department of Education</a>, profiling over 400 districts across the state and reporting on the resources
+			allocated, student characteristics, and student performance.
+		</p>
+	</div>
+
+	<div class="vis-title">
+		<h2 align="center">Economic disadvantage reduces performance in school<br>and has lasting effects after
+			leaving the public school system</h2>
+	</div>
+
+	<div class="vis">
+
+		<div class="container">
+			<div class="row">
+				<!-- left column -->
+				<div class="col-4">
+					<p class="paragraphs" style="padding-left:0px;padding-right: 0px;">Even with current measures to address disparities in academic performance,
+						economically disadvantaged students do not perform at the same level as their wealthier
+						counterparts. This shows up with their ability to meet academic standards during their time
+						in the public school system and limits their future career options.</p>
+					<p class="paragraphs" style="padding-left:0px;padding-right: 0px;">Click and drag on the axis to filter, drag the filter to move it, click
+						anywhere else on the axis to clear the filter</p>
+				</div>
+
+				<!-- right column -->
+				<div class="col-8">
+					<div id="chart-area"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="vis-title">
+		<h2 align="center">Districts with more resources don't perform better...<br>but districts with poorer students
+			and low teacher retention perform far worse.</h2>
+	</div>
+
+	<div class="vis">
+		<div id="stick-person-div"></div>
+
+
+	</div>
+	<div class="text">
+	<p class="paragraphs">If Federal and state efforts are succeeding, you would expect all districts to have
+		similar overall performance, or at least for districts with more resources (money, teachers, etc.) to be
+		outpacing other districts. Unfortunately, this is not the case. The above chart illustrates how little
+		correlation exists between district resources and the academic performance of students in larger districts
+		(4.5k+ students) across the greater Boston area.</p>
+	</div>
+
+	<div class="vis-title">
+		<h2 align="center">A variety of other factors affect academic performance in Massachusetts</h2>
+	</div>
+
+	<div class="vis">
+		<div class="container">
+			<div class="row">
+				<!-- left column -->
+				<div class="col-4">
+					<div align="center">
+						<input type="text" id="districts" name="District" size="35" placeholder="Input the name of a specific district"
+							   style="margin-top: 50px;margin-right: 10px;">
+						<button type="button" id="search">Enter</button>
+					</div>
+
+					<p class="paragraphs" style="padding:90px 0px 0px 0px">In addition to our previously discovered correlations with
+						district demographics and resources, other confounding factors can play a role in student
+						success. In the final visualization, you can explore the relationship between a variety of
+						factors against the success traits elaborated on previously. Through the size and color of
+						each node, you can determine which factors have the most impact within our educational system.
+						Between two different views, you can either compare all the districts as a whole or select
+						specific districts to be placed in a scatter plot by clicking on specific nodes.</p>
+				</div>
+
+				<!-- right column -->
+				<div class="col-8">
+					<div align="center" style="padding:30px">
+
+						<label>Size Determinator</label>
+						<select id="selection">
+							<option value="Enrolled">Enrolled Students</option>
+							<option value="FTE_tchrs_per_100_students">Teachers per 100 Students</option>
+							<option value="Funds_per_indistrict_pupil">$ per Student</option>
+						</select>
+
+						<br>
+
+						<label>Color Determinator</label>
+						<select id="selection2">
+							<option value="Econ_disadv">% at an Economic Disadvantage</option>
+							<option value="ELA_meet_exceed_expectations">ELA Meeting/Exceeding Expectations</option>
+							<option value="ELA_student_growth_percentile">ELA Student Growth Percentile</option>
+							<option value="Math_meet_exceed_expectations">Math Meeting/Exceeding Expectations</option>
+							<option value="Math_student_growth_percentile">Math Student Growth Percentile</option>
+						</select>
+
+						<br>
+
+						<button type="button" id="change">Change View</button>
+
+						<div id="force-map"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="vis-title">
+		<h2 align="center"> </h2>
+	</div>
+
+	<div class="text">
+		<h4>At least in Massachusetts, historic initiatives have not allowed all students to flourish academically. Something needs to be done, but simply throwing more money at existing programs is unlikely to help – it's time to be more creative.
+		<br><br>And one thing is clear – the solution needs to address districts with the worst teacher retention and understand what type of support economically disadvantaged students are lacking.</h4>
+	</div>
+
+	<div class="vis-title">
+		<p class="paragraph" align="center">By Matthew Hawes, Cole Bateman, and Jessa Karlberg<br>
+		<a href="https://docs.google.com/document/d/1Q36ZTPhk5RSQIZJhwHJ6AxWQZoaKnFFd2kFp9YLYZnQ/edit?usp=sharing">View our process book</a><br>
+		Photo by Osman Rana on Unsplash</p>
+	</div>
+
+	<!-- Load JS libraries -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/queue.min.js"></script>
+	<script src="js/d3.min.js"></script>
+	<script src="js/d3-legend.min.js"></script>
+	<script src="js/d3-tip.js"></script>
+
+	<!-- Choropleth and second visualization -->
+	<script src="js/forceMap.js"></script>
+	<script src="js/pcp.js"></script>
+	<script src="js/stickPersonVis.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>

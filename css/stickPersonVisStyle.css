@@ -1,0 +1,83 @@
+
+
+.stick-person-tooltip rect {
+    fill: #eeeeee;
+    rx: 4px;
+}
+
+.stick-person-tooltip polygon {
+    fill: #eeeeee;
+}
+
+.stick-person-tooltip text {
+    text-anchor: start;
+    alignment-baseline: hanging;
+    font-size: 13px;
+    font-family: 'Roboto Light', sans-serif;
+    fill: #999999;
+    text-align: center;
+}
+
+#tooltip-district-name {
+    text-anchor: middle;
+}
+
+.pedestal {
+    stroke: red;
+    stroke-opacity: 0;
+}
+
+.pedestal:hover {
+    opacity: 0.7;
+}
+
+
+#person-size-dropdown, #person-color-dropdown, #pedestal-height-dropdown {
+    position: absolute;
+    z-index: 100;
+    top: 100px;
+    left: 100px;
+    font-size: 13px;
+    height: 30px;
+    padding: 0px 5px;
+    font-family: 'Roboto Light', sans-serif;
+}
+
+#stick-person-div {
+    position: relative;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+}
+
+.stickPersonVis {
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+.small-value-label {
+    text-anchor: end;
+    font-size: 16px;
+    fill: #aaaaaa;
+}
+
+.large-value-label {
+    text-anchor: start;
+    font-size: 16px;
+    fill: #aaaaaa;
+}
+
+#pedestal-scale-line {
+    stroke: #dddddd;
+    stroke-width: 1px;
+    stroke-dasharray: 3px, 3px;
+}
+
+#avg-pedestal-height-label {
+    fill: #80b0a9;
+}
+
+.sort-arrow:hover {
+    fill: #87ccb9;
+}

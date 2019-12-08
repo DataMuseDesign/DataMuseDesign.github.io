@@ -1,0 +1,79 @@
+/* YOUR CSS STYLES */
+body, html {
+    height: 100%;
+}
+
+h2, h4{
+    color:#296655;
+    font-family: 'Roboto Light', sans-serif;
+    text-align: center;
+    padding: 0px 100px 0px 100px;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("boston-skyline.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.paragraphs {
+    font-size: large;
+    padding: 30px 100px 30px 100px;
+    color: darkslategrey;
+    text-align: center;
+}
+
+.text-box {
+    padding: 30px;
+    background-color: #498f7c;
+    width: 700px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text {
+    padding: 30px 100px 30px 100px;
+
+}
+
+.vis-title {
+
+
+    /* Full height */
+    padding: 30px;
+
+    /* The image used */
+    background-image: url('boston-skyline-lighter.jpg');
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.brush .extent {
+    stroke: #fff;
+    fill-opacity: .125;
+    shape-rendering: crispEdges;
+}
+
+/* vis 1 styling */
+.d3-tip {
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+    pointer-events: none;
+}
